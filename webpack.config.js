@@ -32,7 +32,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: path.posix.join('assets', 'img/[name].[hash:7].[ext]')
+              name: path.posix.join('assets', 'img/[name].[ext]')
             }
           },
           'img-loader'
