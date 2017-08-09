@@ -37,7 +37,11 @@ module.exports = {
           },
           'img-loader'
         ]
-      }
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
     ]
   },
   resolve: {
@@ -62,6 +66,6 @@ module.exports = {
       _root: __dirname,
       verbose: true,
       dry: false
-    })
+    }),
   ]
 }
