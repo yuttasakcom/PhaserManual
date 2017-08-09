@@ -14,6 +14,9 @@ const GameState = {
   },
   create () {
     this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL
+    this.scale.pageAlignHorizontally = true
+    this.scale.pageAlignVertically = true
+
     this.background = this.game.add.sprite(0,0, 'background')
     this.knight = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'knight')
     this.knight.anchor.setTo(0.5)
