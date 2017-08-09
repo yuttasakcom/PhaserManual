@@ -1,1 +1,3 @@
-console.log('test3')
+require('pixi.js')
+require('p2')
+require('phaser')

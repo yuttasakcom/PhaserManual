@@ -3,8 +3,8 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
-var phaserModule = path.join(__dirname, '/node_modules/phaser/');
-var phaser = path.join(phaserModule, 'build/custom/phaser-split.js'),
+const phaserModule = path.join(__dirname, '/node_modules/phaser/');
+const phaser = path.join(phaserModule, 'build/custom/phaser-split.js'),
   pixi = path.join(phaserModule, 'build/custom/pixi.js'),
   p2 = path.join(phaserModule, 'build/custom/p2.js');
 
@@ -19,7 +19,8 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /pixi.js/, loader: "script" },
+      { test: /pixi.js/, loader: "script-loader" },
+      { test: /p2.js/, loader: "script-loader" },
       { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
     ]
   },
@@ -45,6 +46,6 @@ module.exports = {
       _root: __dirname,
       verbose: true,
       dry: false
-    }),
+    })
   ]
 }
