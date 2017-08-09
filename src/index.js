@@ -2,10 +2,16 @@ import PIXI from 'pixi.js'
 import p2 from 'p2'
 import Phaser from 'phaser'
 
-const game = new Phaser.Game(640, 360, Phaser.AUTO)
+import background from '@/assets/img/background.jpg'
+
+const game = new Phaser.Game(900, 540, Phaser.AUTO)
 const GameState = {
-  preload () {},
-  create () {},
+  preload () {
+    this.load.image('background', background)
+  },
+  create () {
+    this.background = this.game.add.sprite(0,0, 'background')
+  },
   update () {}
 }
 
