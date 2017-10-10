@@ -1,4 +1,5 @@
-## Phaser 101
+## Phaser Manual
+> คู่มือการใช้งาน Phaser ฉบับ YoProgrammer
 
 ## สารบัญ
 - [Setup Phaser ด้วย Webpack](#webpack-config)
